@@ -64,7 +64,7 @@ export default function PublicBoardsPage() {
       );
 
       if (diffDays === 0 && streak.status === "Completed") {
-        streak++;
+        streak += 1;
         currentDate.setDate(currentDate.getDate() - 1);
       } else if (diffDays > 1 || streak.status !== "Completed") {
         break;

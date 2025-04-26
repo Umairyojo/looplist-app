@@ -27,7 +27,7 @@ export default function Login() {
       } else {
         console.log('Login Successful, Initial Session:', data.session);
         // Session ko explicitly set karo
-        await supabase.auth.setSession(data.session);
+        //await supabase.auth.setSession(data.session);
         const { data: sessionData } = await supabase.auth.getSession();
         console.log('Session After Sync:', sessionData.session);
         if (sessionData.session) {
@@ -61,7 +61,7 @@ export default function Login() {
         console.log('Signup Error:', error.message);
       } else {
         console.log('Signup Successful, Initial Session:', data.session);
-        await supabase.auth.setSession(data.session);
+        //await supabase.auth.setSession(data.session);
         const { data: sessionData } = await supabase.auth.getSession();
         console.log('Session After Sync:', sessionData.session);
         if (sessionData.session) {
